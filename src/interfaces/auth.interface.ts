@@ -1,9 +1,11 @@
 export interface ILoginResponse{
     token: string;
-    admin: {
-        id: number;
-        username: string;
-        email: string;
-        name: string;
-    };
+    admin: IAdminResponse;
+}
+
+export interface IAdminResponse {
+    id: number;
+    username: string;
+    email: string;
+    name: string;
 }
