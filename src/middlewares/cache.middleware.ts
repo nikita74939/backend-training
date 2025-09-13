@@ -102,12 +102,12 @@ const generateCacheKey = (req: Request, prefix: string): string => {
     const method = req.method;
     const userAgent = req.headers["user-agent"] || "";  
 
-    // const userId = req.admin?.id || "anonymous";
+    const userId = "anonymous";
 
     const keyData = {
         method, 
         url,
-        // userId,
+        userId,
         userAgent: crypto
             .createHash("md5")
             .update(userAgent)
