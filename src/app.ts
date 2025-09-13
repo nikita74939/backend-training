@@ -2,6 +2,10 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/auth.route";
 import { MErrorHandler } from "./middlewares/error.middleware";
+import dotenv from "dotenv";
+import { connectRedis } from "./configs/redis.config";  
+
+connectRedis();
 
 const app = express();
 
